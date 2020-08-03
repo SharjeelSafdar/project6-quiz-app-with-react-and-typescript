@@ -1,5 +1,9 @@
 import React, { useContext, useState } from 'react';
+import { resourceCache } from 'use-async-resource';
+// Context
 import { GlobalContext } from '../../context/context';
+// API function
+import { fetchQuestions } from '../../API/API';
 // Styles
 import { StyledWrapper } from './SelectQuiz.styles';
 // Types
@@ -25,6 +29,7 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({ fetchNewQuiz, setAppState }) =>
             numQuestions: numQuestionsSelection,
         };
         submitForm && submitForm(formData);
+        resourceCache(fetchQuestions).clear();
         fetchNewQuiz(categorySelection, typeSelection, difficultySelection, numQuestionsSelection);
         setAppState(1);
     }

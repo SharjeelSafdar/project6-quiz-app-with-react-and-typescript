@@ -12,9 +12,6 @@ import { GlobalStyle, Title } from './App.styles';
 const App = () => {
   const [ quizReader, fetchNewQuiz ] = useAsyncResource(fetchQuestions)
   const [ appState, setAppState ] = useState(0);
-  // If an error message has been shown before, reset appState.
-  if (appState === -1) 
-    setAppState(0);
 
   return (
     <GlobalProvider>
@@ -22,7 +19,7 @@ const App = () => {
       <Title>It's Quiz Time</Title>
       <AsyncResourceContent  
         fallback={<Loading />}
-        errorMessage={<Error setAppState={setAppState}/>}
+        errorMessage={<Error />}
       >
         {appState === 0 && <SelectQuiz fetchNewQuiz={fetchNewQuiz} setAppState={setAppState} />}
         {appState === 1 && <StartQuiz quizReader={quizReader} dataModifier={dataModifier} setAppState={setAppState} />}

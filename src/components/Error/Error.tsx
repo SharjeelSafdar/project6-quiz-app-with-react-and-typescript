@@ -1,11 +1,6 @@
 import React from 'react';
-import { Button } from '../ButtonWrapper';
 
-type Props = {
-    setAppState: React.Dispatch<React.SetStateAction<number>>;
-}
-
-const Error: React.FC<Props> = ({ setAppState }) => {
+const Error = () => {
     return (
         <>
             <h1
@@ -15,13 +10,11 @@ const Error: React.FC<Props> = ({ setAppState }) => {
                     padding: '20px',
                     width: '500px',
                     margin: '20px auto',
+                    maxWidth: '90vw',
                 }}
             >
-                Oops... Something went wrong. Please try again with different options.
+                Something went wrong. Please, refresh the page and try again with different options.
             </h1>
-            <Button onClick={() => setAppState(-1) /* Render SelectQuiz component. */}>
-                Select New Quiz
-            </Button>
         </>
     )
 }

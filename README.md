@@ -13,13 +13,13 @@ The following are some of the features of the app:
 - Questions related to 30+ categories.
 - Both multiple choice and true/false questions.
 - Three difficulty levels to choose from.
-- Select the numer of questions.
+- Select the number of questions.
 - Shows results at the end of quiz with correct and incorrect answers highlighted.
 
 ### Learning Outcomes
 The following are some of the learning outcomes of this project:
 - Using TypeScript to develop a React app.
-- Using [Styled Components](https://styled-components.com/) to create resusable styled React components.
+- Using [Styled Components](https://styled-components.com/) to create reusable styled React components.
 - Making the app mobile responsive.
 - Implementing Render-as-You-Fetch approach using [React Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html). Displaying a fallback component while the data is being fetched.
 

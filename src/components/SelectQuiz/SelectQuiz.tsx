@@ -6,6 +6,7 @@ import { GlobalContext } from '../../context/context';
 import { fetchQuestions } from '../../API/API';
 // Styles
 import { StyledWrapper } from './SelectQuiz.styles';
+import { Button } from '../ButtonWrapper';
 // Types
 import { FormData } from '../../types';
 
@@ -64,7 +65,9 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({ fetchNewQuiz, setAppState }) =>
                     ))}
                 </select>
 
-                <button type='submit' onClick={clickHandler}>Start Quiz</button>
+                <Button type='submit' onClick={clickHandler}>
+                    Start Quiz
+                </Button>
             </form>
         </StyledWrapper>
     )

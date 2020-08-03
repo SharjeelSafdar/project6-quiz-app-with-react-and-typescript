@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../../context/context';
 // Styles
 import { Wrapper, ButtonWrapper } from './Results.styles';
+import { Button } from '../ButtonWrapper';
 // Types
 import { Question } from '../../types';
 type Props = {
@@ -22,7 +23,7 @@ const Results: React.FC<Props> = ({ setAppState }) => {
             <div className="heading">Quiz Results</div>
             <div className="score">{`Score: ${score}/${totalQuestions}`}</div>
             {questions.map( (question: Question, i: number) => (
-                <div className="qDiv">
+                <div className="qDiv" key={question.questionStatement}>
                     <div className="qNum">{`Question # ${i + 1}/${totalQuestions}`}</div>
                     <div className="qStatement">{question.questionStatement}</div>
                     {question.options.map( (option: string) => (
@@ -39,9 +40,9 @@ const Results: React.FC<Props> = ({ setAppState }) => {
                 </div>
             ))}
 
-                    <button className="next" onClick={ () => setAppState(0)/* Show SelectQuiz component on next render. */}>
+            <Button onClick={ () => setAppState(0)/* Show SelectQuiz component on next render. */}>
                 Start New Quiz
-            </button>
+            </Button>
         </Wrapper>
     );
 }

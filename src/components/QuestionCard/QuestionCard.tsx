@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../../context/context';
 // Styles
 import { Wrapper, ButtonWrapper } from './QuestionCard.styles';
+import { Button } from '../ButtonWrapper';
 
 type Props = {
     setAppState: React.Dispatch<React.SetStateAction<number>>;
@@ -60,9 +61,9 @@ const QuestionCard: React.FC<Props> = ({ setAppState }) => {
                     </button>
                 </ButtonWrapper>
             ))}
-            <button className="next" onClick={nextHandler} disabled={!userAnswers[currentQuestion]}>
+            <Button onClick={nextHandler} disabled={!userAnswers[currentQuestion]}>
                 {currentQuestion === totalQuestions - 1 ? 'Finish Quiz' : 'Next Question'}
-            </button>
+            </Button>
         </Wrapper>
     )
 }

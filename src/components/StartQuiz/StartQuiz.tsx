@@ -5,6 +5,7 @@ import { GlobalContext } from '../../context/context';
 import { DataModifier, QuizData } from '../../types';
 // Styles
 import { Wrapper } from './StartQuiz.styles';
+import { Button } from '../ButtonWrapper';
 
 type Props = {
     quizReader: any;
@@ -39,9 +40,9 @@ const StartQuiz: React.FC<Props> = ({ quizReader, dataModifier, setAppState }) =
                 <span>{`Total Questions: `}</span>
                 <span>{selectedNumOfQuestions}</span>
             </div>
-            <button onClick={clickHandler}>
+            <Button onClick={clickHandler}>
                 Start Quiz
-            </button>
+            </Button>
         </Wrapper>
     )
 }

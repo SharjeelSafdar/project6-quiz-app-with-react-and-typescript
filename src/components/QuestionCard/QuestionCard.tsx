@@ -63,7 +63,7 @@ const QuestionCard: React.FC<Props> = ({ setAppState }) => {
                     </button>
                 </ButtonWrapper>
             ))}
-            <button className="next" onClick={nextHandler}>
+            <button className="next" onClick={nextHandler} disabled={!userAnswers[currentQuestion]}>
                 {currentQuestion === totalQuestions - 1 ? 'Finish Quiz' : 'Next Question'}
             </button>
         </Wrapper>

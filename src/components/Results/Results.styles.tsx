@@ -6,19 +6,24 @@ export const Wrapper = styled.div`
     color: white;
     border: solid medium #87f1ff;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 10px auto 50px;
     width: 500px;
     max-width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    .qNum, .category, .type, .difficulty {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    .heading {
+        font-size: 2rem;
+        text-align: center;
     }
     .score {
+        text-align: center;
+    }
+    .qDiv {
+        margin: 20px 0;
+    }
+    .qNum {
         text-align: center;
     }
     .qStatement {
@@ -57,7 +62,6 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     }
 
     button {
-        cursor: pointer;
         user-select: none;
         font-size: 0.8rem;
         width: 100%;

@@ -2,11 +2,6 @@ import { State, Action } from '../types';
 
 export const reducerFunc = (state: State, action: Action): State => {
     switch (action.id) {
-        // case 'SET_APP_STATE':
-        //     return {
-        //         ...state,
-        //         appState: action.payload,
-        //     }
         case 'SUBMIT_FORM':
             return {
                 ...state,

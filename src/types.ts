@@ -13,20 +13,12 @@ export type State = {
     selectedType: string,
     slectedDifficulty: string;
     selectedNumOfQuestions: number;
-    // appState: number;
     quizData: QuizData;
-    // setAppState?: (state: number) => void;
     submitForm?: (formData: FormData) => void;
     startQuiz?: (quizData: QuizData) => void;
     submitAnswer?: (userAnswer: string) => void;
     nextQuestion?: () => void;
 }
-
-// export type StateActions = {
-//     submitFormData: (formData: FormData) => void;
-// }
-
-// export type State = StateData | StateActions;
 
 export type FormData = {
     category: number;

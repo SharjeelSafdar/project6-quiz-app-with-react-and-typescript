@@ -39,7 +39,7 @@ const Results: React.FC<Props> = ({ setAppState }) => {
                 </div>
             ))}
 
-            <button className="next" onClick={ () => setAppState(0) }>
+                    <button className="next" onClick={ () => setAppState(0)/* Show SelectQuiz component on next render. */}>
                 Start New Quiz
             </button>
         </Wrapper>

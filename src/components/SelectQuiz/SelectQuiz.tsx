@@ -31,7 +31,7 @@ const SelectQuiz: React.FC<SelectQuizProps> = ({ fetchNewQuiz, setAppState }) =>
         submitForm && submitForm(formData);
         resourceCache(fetchQuestions).clear();
         fetchNewQuiz(categorySelection, typeSelection, difficultySelection, numQuestionsSelection);
-        setAppState(1);
+        setAppState(1); // Show StartQuiz component on next render.
     }
     return (
         <StyledWrapper>

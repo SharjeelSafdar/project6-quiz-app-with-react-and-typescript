@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 // Context
 import { GlobalContext } from '../../context/context';
-// Types
-// import { DataModifier,QuizData } from '../../types';
 // Styles
 import { Wrapper, ButtonWrapper } from './QuestionCard.styles';
 
@@ -18,14 +16,13 @@ const QuestionCard: React.FC<Props> = ({ setAppState }) => {
             questions, 
             correctAnswers,
             userAnswers,
-            // isAnswerCorrect,
         } } = useContext(GlobalContext);
     const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         submitAnswer && submitAnswer(e.currentTarget.value);
     }
     const nextHandler = () => {
         if (currentQuestion === totalQuestions - 1) {
-            setAppState(3)
+            setAppState(3); // Show Results component on next render.
         } else {
             nextQuestion && nextQuestion();
         }

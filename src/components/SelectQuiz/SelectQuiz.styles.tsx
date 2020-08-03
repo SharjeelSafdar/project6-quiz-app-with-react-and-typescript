@@ -6,7 +6,7 @@ export const StyledWrapper = styled.div`
     color: white;
     border: solid medium #87f1ff;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 10px auto 50px;
     width: 500px;
     max-width: 90vw;
 

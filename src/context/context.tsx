@@ -52,7 +52,6 @@ const initialState: State = {
     selectedType: '',
     slectedDifficulty: '',
     selectedNumOfQuestions: 5,
-    // appState: 0,
     quizData: {
         totalQuestions: 5,
         score: 0,
@@ -68,9 +67,6 @@ export const GlobalContext = createContext<State>(initialState);
 
 export const GlobalProvider: React.FC = ({ children }) => {
     const [ state, dispatch ] = useReducer<React.Reducer<State, Action>>(reducerFunc, initialState);
-    // const setAppState = (state: number) => {
-    //     dispatch({ id: 'SET_APP_STATE', payload: state });
-    // }
     const submitForm = (formData: FormData) => {
         dispatch({ id: 'SUBMIT_FORM', payload: formData });
     }
@@ -86,7 +82,6 @@ export const GlobalProvider: React.FC = ({ children }) => {
     return (
         <GlobalContext.Provider value={{
             ...state,
-            // setAppState,
             submitForm,
             startQuiz,
             submitAnswer,
